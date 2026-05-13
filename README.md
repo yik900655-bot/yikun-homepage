@@ -1,6 +1,12 @@
 # 一坤个人主页
 
-一个可对外展示的个人主页项目，使用 Next.js + Tailwind CSS，适配电脑端和手机端，可直接部署到 Vercel。
+一个可对外展示的个人主页项目，使用 Next.js + Tailwind CSS，适配电脑端和手机端，可直接部署到 GitHub Pages 或 Vercel。
+
+线上地址：
+
+```text
+https://yik900655-bot.github.io/yikun-homepage/
+```
 
 ## 1. 本地运行
 
@@ -121,7 +127,22 @@ npm run build
 # 3. 重新触发 Redeploy
 ```
 
-## 5. 后续如何修改个人信息
+## 5. 当前 GitHub Pages 部署
+
+当前仓库已公开，并通过 `gh-pages` 分支发布：
+
+```text
+仓库：https://github.com/yik900655-bot/yikun-homepage
+网页：https://yik900655-bot.github.io/yikun-homepage/
+```
+
+成功判断：
+
+```text
+浏览器打开网页链接返回个人主页，不需要登录。
+```
+
+## 6. 后续如何修改个人信息
 
 主要修改文件：
 
@@ -146,7 +167,7 @@ npm run dev
 # 浏览器刷新后能看到新内容
 ```
 
-## 6. 下次继续修改时怎么调用
+## 7. 下次继续修改时怎么调用
 
 直接把这个仓库发给 AI，并说明：
 
@@ -160,7 +181,7 @@ npm run dev
 AI 能知道页面定位、核心文案、联系方式、运行方式和部署方式。
 ```
 
-## 7. 项目结构
+## 8. 项目结构
 
 ```text
 yikun-homepage/

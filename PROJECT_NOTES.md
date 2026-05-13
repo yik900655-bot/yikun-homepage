@@ -98,3 +98,10 @@ GitHub 仓库 -> Vercel Import Project -> 自动部署 -> 获得可分享链接
 ```
 
 拿到线上链接后，可以直接分享给别人。
+
+## 当前线上链接
+
+```text
+仓库：https://github.com/yik900655-bot/yikun-homepage
+网页：https://yik900655-bot.github.io/yikun-homepage/
+```
