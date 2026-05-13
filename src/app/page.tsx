@@ -6,17 +6,14 @@ import {
   Code2,
   Compass,
   FileText,
-  GitBranch,
   Layers3,
   ListChecks,
   Mail,
-  MessageCircle,
   NotebookTabs,
   PenLine,
   Search,
   Sparkles,
   Table2,
-  UserRound,
   Workflow,
 } from "lucide-react";
 
@@ -27,8 +24,6 @@ const navItems = [
   { label: "表达方式", href: "#expression" },
   { label: "联系我", href: "#contact" },
 ];
-
-const heroTags = ["AI 探索", "需求判断", "SOP 整理", "轻工具实践"];
 
 const journeyItems = [
   {
@@ -59,28 +54,28 @@ const journeyItems = [
 
 const focusItems = [
   {
-    title: "AI 如何帮助普通人提高判断和执行效率",
-    description: "不是追逐新工具，而是把问题拆清楚，把下一步变得更具体。",
-    icon: Compass,
-  },
-  {
-    title: "小红书虚拟产品里的真实需求",
-    description: "观察评论、场景和反复出现的问题，判断需求是否真的存在。",
+    title: "小红书虚拟产品选题",
+    description: "观察资料包、模板、教程和轻咨询等形态，看它们解决的具体问题。",
     icon: Search,
   },
   {
-    title: "案例背后的需求、流量和成交方式",
-    description: "拆解一个案例为什么能成立，以及哪些部分不适合直接照搬。",
+    title: "评论区里的需求信号",
+    description: "从评论、咨询意向和反复出现的问题里，判断需求强度。",
+    icon: Compass,
+  },
+  {
+    title: "真实结果案例拆解",
+    description: "拆一个案例的内容入口、流量来源、成交方式和交付路径。",
     icon: BookOpenText,
   },
   {
-    title: "把经验整理成 SOP、表格、工具和知识库",
-    description: "用更稳定的形式沉淀经验，减少每次都从头摸索。",
+    title: "SOP 与素材沉淀",
+    description: "把可复用的观察维度整理成表格、清单和知识库。",
     icon: Layers3,
   },
   {
-    title: "需求明确后，再尝试轻工具落地",
-    description: "先确认问题和使用场景，再考虑用小程序、API 或自动化承接。",
+    title: "需求明确后再工具化",
+    description: "先验证问题，再用 AI、自动化或小程序把流程做轻。",
     icon: Code2,
   },
 ];
@@ -103,17 +98,10 @@ const expressionNotFitItems = [
 ];
 
 const connectItems = [
-  "30 岁以后重新思考方向",
-  "想用 AI 提高效率",
-  "不想盲目追风口",
-  "正在把经历整理成方法",
-];
-
-const contactItems = [
-  { label: "小红书", value: "待补充", icon: MessageCircle },
-  { label: "公众号", value: "待补充", icon: NotebookTabs },
-  { label: "邮箱", value: "待补充", icon: Mail },
-  { label: "GitHub", value: "待补充", icon: GitBranch },
+  "做过真实发布和测试",
+  "拿到过转化或成交结果",
+  "愿意聊需求和交付细节",
+  "看重复盘而不是包装",
 ];
 
 export default function Home() {
@@ -153,33 +141,19 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-5 py-10 sm:px-8 sm:py-14 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:py-18">
-        <div className="fade-in">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-md border border-[#c7dedc] bg-white/70 px-3 py-2 text-sm font-medium text-[#0f766e]">
-            <UserRound className="h-4 w-4" aria-hidden="true" />
-            普通人的 AI 转型记录
+      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+        <div className="fade-in max-w-4xl">
+          <p className="text-sm font-medium text-[#0f766e]">
+            一坤 · AI 探索者
           </p>
 
-          <h1 className="max-w-3xl text-4xl font-semibold leading-[1.12] text-[#111512] sm:text-5xl lg:text-[54px]">
-            <span className="block">一坤，</span>
-            <span className="block">一个正在用 AI 重新整理自己的普通人。</span>
+          <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-[1.12] text-[#111512] sm:text-5xl lg:text-[64px]">
+            一个正在用 AI 整理经历、判断方向的普通人。
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-[#56615a] sm:text-lg">
-            我经历过内容分发、短视频、小程序和各种副业尝试。现在更关注：如何用 AI
-            看清需求、整理经验、减少盲目试错。
+            做过内容分发、短视频和小程序实验。现在更关注如何看清需求、沉淀方法，少一点盲目试错。
           </p>
-
-          <div className="mt-6 flex flex-wrap gap-2">
-            {heroTags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-md border border-[#d6e3df] bg-white/80 px-3 py-1.5 text-sm font-medium text-[#506058]"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -196,74 +170,6 @@ export default function Home() {
               看我正在关注什么
               <Compass className="h-4 w-4" aria-hidden="true" />
             </a>
-          </div>
-
-          <dl className="mt-8 grid max-w-2xl grid-cols-3 gap-3 border-t border-[#d9ded5] pt-6">
-            <div>
-              <dt className="text-2xl font-semibold">30+</dt>
-              <dd className="mt-1 text-xs leading-5 text-[#667069]">
-                短视频发布实验
-              </dd>
-            </div>
-            <div>
-              <dt className="text-2xl font-semibold">3</dt>
-              <dd className="mt-1 text-xs leading-5 text-[#667069]">
-                小程序实践
-              </dd>
-            </div>
-            <div>
-              <dt className="text-2xl font-semibold">长期</dt>
-              <dd className="mt-1 text-xs leading-5 text-[#667069]">
-                AI 工具使用
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        <div className="fade-in fade-in-delay-1 hidden md:block">
-          <div className="rounded-lg border border-[#d6ddd5] bg-white p-5 shadow-[0_18px_60px_rgba(18,26,20,0.08)]">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-sm font-medium text-[#0f766e]">当前记录</p>
-                <h2 className="mt-2 text-2xl font-semibold leading-[1.25]">
-                  不是给答案，而是把过程整理清楚。
-                </h2>
-              </div>
-              <span className="rounded-md bg-[#edf7f5] px-3 py-1 text-xs font-medium text-[#0f766e]">
-                持续更新
-              </span>
-            </div>
-
-            <div className="mt-6 space-y-5">
-              {[
-                ["01", "经历整理", "把过去做过的事重新拆开，看哪些能力可以延续"],
-                ["02", "案例拆解", "看清一个案例背后的需求、流量和交付方式"],
-                ["03", "需求判断", "从评论、场景和反馈里判断问题是否真实存在"],
-                ["04", "方法沉淀", "把零散经验整理成 SOP、表格和知识库"],
-              ].map(([step, title, text]) => (
-                <div
-                  key={step}
-                  className="grid grid-cols-[44px_1fr] gap-4 border-t border-[#edf0ea] pt-5 first:border-t-0 first:pt-0"
-                >
-                  <span className="text-sm font-semibold text-[#0f766e]">
-                    {step}
-                  </span>
-                  <div>
-                    <h3 className="font-semibold">{title}</h3>
-                    <p className="mt-1 text-sm leading-6 text-[#667069]">
-                      {text}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 rounded-md bg-[#f6f7f2] p-4">
-              <p className="text-sm leading-6 text-[#5f6a63]">
-                现在的重点不是把自己包装成某个角色，而是用 AI
-                把经历、判断和行动路径慢慢理顺。
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -339,8 +245,8 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-20">
           <SectionLabel
             eyebrow="我现在关注什么"
-            title="从追工具，慢慢转向看需求、看场景、看反馈。"
-            description="我现在更愿意把 AI 当成一个辅助整理和判断的工具，而不是一个立刻改变人生的捷径。"
+            title="核心关注：小红书虚拟产品里的真实需求。"
+            description="我现在重点拆小红书虚拟产品，关注选题、评论反馈、流量路径、成交方式和交付流程，判断哪些需求值得继续做。"
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {focusItems.map((item) => (
@@ -408,11 +314,10 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-20">
           <p className="text-sm font-medium text-[#8bd3c7]">我想连接的人</p>
           <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-[1.25] sm:text-4xl">
-            如果你也在重新整理方向，可能会对我的记录感兴趣。
+            想连接在小红书虚拟产品里拿到真实结果的人。
           </h2>
           <p className="mt-5 max-w-3xl text-base leading-8 text-white/68">
-            如果你也在 30
-            岁以后重新思考方向，也想用 AI 提高效率，也不想盲目追风口，也在尝试把经历整理成方法，那我们可能有相似的问题和观察角度。
+            我更想听具体过程：选题怎么来、评论怎么判断、内容怎么测试、交付怎么完成，而不是只看表面的热闹。
           </p>
           <div className="mt-10 grid gap-3 md:grid-cols-4">
             {connectItems.map((item) => (
@@ -431,27 +336,20 @@ export default function Home() {
         id="contact"
         className="scroll-mt-24 mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-20"
       >
-        <div className="grid gap-10 rounded-lg border border-[#d7ded5] bg-white p-6 shadow-[0_18px_60px_rgba(18,26,20,0.07)] sm:p-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="rounded-lg border border-[#d7ded5] bg-white p-6 shadow-[0_18px_60px_rgba(18,26,20,0.07)] sm:flex sm:items-center sm:justify-between sm:gap-8 sm:p-8">
           <div>
             <p className="text-sm font-medium text-[#0f766e]">联系我</p>
-            <h2 className="mt-4 text-3xl font-semibold leading-[1.25]">
-              这里先保留入口，后续补充具体链接。
+            <h2 className="mt-3 text-2xl font-semibold leading-[1.25]">
+              邮箱
             </h2>
-            <p className="mt-4 text-base leading-7 text-[#5f6a63]">
-              如果你想了解我的 AI 探索记录、需求观察或工具整理过程，可以从这些入口找到我。
-            </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {contactItems.map((item) => (
-              <div key={item.label} className="rounded-lg border border-[#e0e5dd] p-4">
-                <div className="flex items-center gap-3">
-                  <item.icon className="h-5 w-5 text-[#0f766e]" aria-hidden="true" />
-                  <span className="font-medium">{item.label}</span>
-                </div>
-                <p className="mt-3 text-sm text-[#667069]">{item.value}</p>
-              </div>
-            ))}
-          </div>
+          <a
+            href="mailto:yik900655@gmail.com"
+            className="mt-5 inline-flex w-full items-center justify-center gap-3 rounded-md border border-[#dce5dd] bg-[#fbfcfa] px-5 py-4 text-sm font-semibold text-[#1f2922] transition hover:border-[#0f766e] hover:text-[#0f766e] sm:mt-0 sm:w-auto"
+          >
+            <Mail className="h-5 w-5 text-[#0f766e]" aria-hidden="true" />
+            yik900655@gmail.com
+          </a>
         </div>
       </section>
 

@@ -16,7 +16,7 @@ npm run dev
 
 ```text
 终端出现 Local: http://localhost:3000
-浏览器打开 http://localhost:3000 能看到「一坤，一个正在用 AI 重新整理自己的普通人。」
+浏览器打开 http://localhost:3000 能看到「一个正在用 AI 整理经历、判断方向的普通人。」
 ```
 
 失败修复：
@@ -135,12 +135,8 @@ src/app/globals.css   全局背景、字体、动效
 
 ```tsx
 // src/app/page.tsx
-const contactItems = [
-  { label: "小红书", value: "待补充", icon: MessageCircle },
-  { label: "公众号", value: "待补充", icon: NotebookTabs },
-  { label: "邮箱", value: "待补充", icon: Mail },
-  { label: "GitHub", value: "待补充", icon: Github },
-];
+// 搜索 yik900655@gmail.com
+// 这里是当前页面保留的唯一联系方式
 ```
 
 成功判断：
@@ -150,10 +146,25 @@ npm run dev
 # 浏览器刷新后能看到新内容
 ```
 
-## 6. 项目结构
+## 6. 下次继续修改时怎么调用
+
+直接把这个仓库发给 AI，并说明：
+
+```text
+这是我的个人主页项目，请先阅读 README.md 和 PROJECT_NOTES.md，再基于 src/app/page.tsx 修改首页。
+```
+
+成功判断：
+
+```text
+AI 能知道页面定位、核心文案、联系方式、运行方式和部署方式。
+```
+
+## 7. 项目结构
 
 ```text
 yikun-homepage/
+├── PROJECT_NOTES.md   项目背景和下次修改入口
 ├── src/app/
 │   ├── page.tsx       首页
 │   ├── layout.tsx     页面元信息和根布局
