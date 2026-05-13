@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[7121,[],""]
+3:I[4581,[],""]
+:HL["/yikun-homepage/_next/static/css/d49abb2549d10f3d.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/yikun-homepage/_next/static/css/d49abb2549d10f3d.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"zRoNiO1sRqhcohF9IGcgs"}
